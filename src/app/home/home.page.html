@@ -5,24 +5,20 @@
 </ion-header>
 
 <ion-content>
-  <!-- File Name Input -->
   <ion-item>
     <ion-label position="floating">File Name</ion-label>
     <ion-input [(ngModel)]="fileName"></ion-input>
   </ion-item>
 
-  <!-- File Content Input -->
   <ion-item>
     <ion-label position="floating">File Content</ion-label>
     <ion-textarea [(ngModel)]="fileContent"></ion-textarea>
   </ion-item>
 
-  <!-- Buttons for actions -->
   <ion-button expand="full" (click)="createFile()">Create File</ion-button>
   <ion-button expand="full" (click)="readFile()">Read File</ion-button>
   <ion-button expand="full" (click)="deleteFile()">Delete File</ion-button>
 
-  <!-- List of files -->
   <ion-list>
     <ion-item *ngFor="let file of filelist">
       {{ file }}
